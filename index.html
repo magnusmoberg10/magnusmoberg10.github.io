@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="1; URL='https://tapademy.com'" />
+    <meta http-equiv="refresh" content="2; URL='https://tapademy.com'" />
     <title>Tapademy Ads</title>
     <style>
         body {
@@ -17,32 +17,35 @@
             color: #333;
             text-align: center;
         }
-        .container {
-            padding: 20px;
-        }
-        img {
-            max-width: 220px; /* Slightly adjusted size */
-            height: auto;
-            margin-bottom: 20px;
-        }
+        .container { padding: 20px; }
+        img { max-width: 220px; height: auto; margin-bottom: 20px; }
+        
         .loader {
             border: 3px solid #f3f3f3;
-            border-top: 3px solid #1a73e8; /* Classic blue accent */
+            border-top: 3px solid #1a73e8;
             border-radius: 50%;
             width: 24px;
             height: 24px;
             animation: spin 0.8s linear infinite;
+            display: block;
+            margin: 15px auto;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        p { font-size: 1.1rem; color: #666; margin-bottom: 20px; }
+        
+        .btn {
             display: inline-block;
-            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #1a73e8;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        p {
-            font-size: 1.1rem;
-            color: #666;
-        }
+        .btn:hover { background-color: #1557b0; }
+        .footer-text { font-size: 0.8rem; color: #999; margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -50,6 +53,8 @@
         <img src="logo.png" alt="Tapademy Logo">
         <p>Redirecting you to tapademy.com...</p>
         <div class="loader"></div>
+        <a href="https://tapademy.com" class="btn">Click here if you are not redirected</a>
+        <div class="footer-text">App-ads.txt is hosted on this domain for verification purposes.</div>
     </div>
 </body>
 </html>
