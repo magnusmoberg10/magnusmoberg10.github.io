@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="2; URL='https://tapademy.com'" />
+    <meta http-equiv="refresh" content="3; URL='https://tapademy.com'" />
     <title>Tapademy Ads</title>
     <style>
         body {
@@ -13,39 +13,70 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #ffffff;
-            color: #333;
+            /* The exact light blue from your logo background */
+            background-color: #a0c4df;
+            /* The dark gray color from your logo text for general text */
+            color: #4a4a4a;
             text-align: center;
         }
-        .container { padding: 20px; }
-        img { max-width: 220px; height: auto; margin-bottom: 20px; }
+        .container {
+            padding: 30px;
+        }
+        img {
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 10px;
+            /* Ensuring the image blends perfectly if it has its own background */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
         
+        /* Loader changed to white to match the icons in the logo */
         .loader {
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid #1a73e8;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid #ffffff;
             border-radius: 50%;
             width: 24px;
             height: 24px;
             animation: spin 0.8s linear infinite;
             display: block;
-            margin: 15px auto;
+            margin: 20px auto;
         }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
-        p { font-size: 1.1rem; color: #666; margin-bottom: 20px; }
+        p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
         
+        /* Button uses the dark gray accent color */
         .btn {
             display: inline-block;
-            padding: 10px 20px;
-            background-color: #1a73e8;
+            padding: 12px 24px;
+            background-color: #4a4a4a; /* Matches logo text color */
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            transition: background 0.3s;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: background 0.3s, transform 0.1s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .btn:hover { background-color: #1557b0; }
-        .footer-text { font-size: 0.8rem; color: #999; margin-top: 10px; }
+        .btn:hover {
+            background-color: #333333; /* Slightly darker on hover */
+            transform: translateY(-1px);
+        }
+        .btn:active {
+            transform: translateY(1px);
+        }
+        .footer-text {
+            font-size: 0.85rem;
+            /* Slightly lighter gray for footer */
+            color: #666666;
+            margin-top: 30px;
+        }
     </style>
 </head>
 <body>
@@ -53,7 +84,7 @@
         <img src="logo.png" alt="Tapademy Logo">
         <p>Redirecting you to tapademy.com...</p>
         <div class="loader"></div>
-        <a href="https://tapademy.com" class="btn">Click here if you are not redirected</a>
+        <a href="https://tapademy.com" class="btn">Click here if not redirected</a>
         <div class="footer-text">App-ads.txt is hosted on this domain for verification purposes.</div>
     </div>
 </body>
